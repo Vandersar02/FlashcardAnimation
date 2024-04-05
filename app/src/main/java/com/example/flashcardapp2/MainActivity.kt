@@ -177,8 +177,8 @@ class MainActivity : AppCompatActivity() {
 
         plusBtn.setOnClickListener {
             val intent = Intent(this@MainActivity, AddCardActivity::class.java)
-            overridePendingTransition(R.anim.right_in, R.anim.left_out)
             startActivityForResult(intent, addRequest)
+            overridePendingTransition(R.anim.right_in, R.anim.left_out)
         }
 
         editBtn.setOnClickListener {
@@ -192,8 +192,9 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("answer1", answer)
                 intent.putExtra("answer2", wrongAnswer1)
                 intent.putExtra("answer3", wrongAnswer2)
-                overridePendingTransition(R.anim.right_in, R.anim.left_out)
                 startActivityForResult(intent, editRequest)
+                overridePendingTransition(R.anim.right_in, R.anim.left_out)
+
             } else {
                 Snackbar.make(findViewById(android.R.id.content), "No card to edit.", Snackbar.LENGTH_LONG).show()
             }
@@ -305,7 +306,7 @@ class MainActivity : AppCompatActivity() {
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
 
         if (vibrator?.hasVibrator() == true) {
-            val duration = 1000L // Durée de la vibration
+            val duration = 500L // Durée de la vibration
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.EFFECT_DOUBLE_CLICK))

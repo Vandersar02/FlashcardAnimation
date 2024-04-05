@@ -34,8 +34,8 @@ class AddCardActivity : AppCompatActivity() {
         }
 
         btnClose.setOnClickListener {
-            overridePendingTransition(R.anim.left_out, R.anim.right_in)
-            finish()
+            startActivity(Intent(this, MainActivity::class.java))
+            overridePendingTransition(R.anim.right_in, R.anim.left_out)
         }
     }
 
@@ -76,12 +76,9 @@ class AddCardActivity : AppCompatActivity() {
             Toast.makeText(this, "Successfully Create.", Toast.LENGTH_SHORT).show()
         }
         // Retourner le résultat à l'activité appelante
-        setResult(Activity.RESULT_OK)
-
-        // Redémarrer MainActivity
         startActivity(Intent(this, MainActivity::class.java))
-        overridePendingTransition(R.anim.left_out, R.anim.right_in)
 
-        finish()
+        overridePendingTransition(R.anim.right_in, R.anim.left_out)
+
     }
 }
