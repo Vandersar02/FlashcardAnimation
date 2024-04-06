@@ -7,7 +7,7 @@ showers upon selecting correct answers, enhancing engagement and enjoyment durin
 
 ### App Walk-though
 
-<img src="https://github.com/Vandersar02/FlashCardapp2/blob/main/gif/FlashCard3.gif" width=200><br>
+<img src="https://github.com/Vandersar02/FlashcardAnimation/blob/main/FlashcardAnimation.gif" width=200><br>
 
 ## Required
 - [x] User sees a transition animation when going from the main screen to the add card screen.
